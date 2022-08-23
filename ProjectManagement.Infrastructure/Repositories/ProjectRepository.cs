@@ -6,6 +6,13 @@ namespace ProjectManagement.Infrastructure.Repositories
 {
     public class ProjectRepository : GenericRepository<Project>, IProjectRepository
     {
+        private readonly ProjectManagementDbContext dbContext;
+
+        public ProjectRepository(ProjectManagementDbContext dbContext) : base(dbContext)
+        {
+            this.dbContext = dbContext;
+        }
+
         public Task AssignUser(Project project, User user)
         {
             throw new NotImplementedException();

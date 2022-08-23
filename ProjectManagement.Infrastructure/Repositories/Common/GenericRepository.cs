@@ -5,6 +5,12 @@ namespace ProjectManagement.Infrastructure.Repositories.Common
 {
     public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
     {
+        private readonly ProjectManagementDbContext dbContext;
+
+        public GenericRepository(ProjectManagementDbContext dbContext)
+        {
+            this.dbContext = dbContext;
+        }
         public Task<T> Add(T entity)
         {
             throw new NotImplementedException();
