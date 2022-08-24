@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using ProjectManagement.Domain.Common.Entities;
 using ProjectManagement.Domain.Entities;
 
 namespace ProjectManagement.Infrastructure
@@ -7,6 +8,20 @@ namespace ProjectManagement.Infrastructure
     {
         public ProjectManagementDbContext(DbContextOptions<ProjectManagementDbContext> options) : base(options)
         {
+        }
+
+        public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
+        {
+            foreach (var entry in ChangeTracker.Entries<BaseEntity>())
+            {
+                // After authentication add modified and created by {user}
+                entry.Entity.DateModified = DateTime.Now;
+                if (entry.State == EntityState.Added)
+                {
+                    entry.Entity.DateCreated = DateTime.Now;
+                }
+            }
+            return base.SaveChangesAsync(cancellationToken);
         }
 
         public DbSet<User> Users { get; set; }
