@@ -1,6 +1,6 @@
 ﻿namespace ProjectManagement.Application.DTOs.Users
 {
-    public class AddUserDto
+    public class CreateUserDto
     {
         public string EmailAddress { get; set; }
         public string UserName { get; set; }

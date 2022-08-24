@@ -1,6 +1,6 @@
 ﻿namespace ProjectManagement.Application.DTOs.Users
 {
-    public class UpdateUserDto : AddUserDto
+    public class UpdateUserDto : CreateUserDto
     {
         public Guid Id { get; set; }
     }
