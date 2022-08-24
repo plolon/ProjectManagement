@@ -6,7 +6,8 @@ namespace ProjectManagement.Domain.Entities
     {
         public string Name { get; set; }
         public string Description { get; set; }
-        public Type Type { get; set; }
+        public TaskType TaskType { get; set; }
+        public Guid TaskTypeId { get; set; }
         public bool Status { get; set; }
         public List<Comment> Comments { get; set; }
         public List<Comment> Todos { get; set; }

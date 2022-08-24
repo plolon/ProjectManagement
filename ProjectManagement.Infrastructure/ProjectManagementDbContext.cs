@@ -24,7 +24,7 @@ namespace ProjectManagement.Infrastructure
             return base.SaveChangesAsync(cancellationToken);
         }
 
-        public DbSet<User> Users { get; set; }
+        public DbSet<User> Users { get; set; } 
         public DbSet<Project> Projects { get; set; }
         public DbSet<ProjectTask> ProjectTasks { get; set; }
         public DbSet<TaskType> TaskTypes { get; set; }
