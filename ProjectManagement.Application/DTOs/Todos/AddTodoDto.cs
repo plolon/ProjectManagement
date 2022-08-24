@@ -1,4 +1,4 @@
-﻿namespace ProjectManagement.API.DTOs.Todos
+﻿namespace ProjectManagement.Application.DTOs.Todos
 {
     public class AddTodoDto
     {

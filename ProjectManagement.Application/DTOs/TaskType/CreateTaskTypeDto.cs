@@ -1,4 +1,4 @@
-﻿namespace ProjectManagement.API.DTOs.TaskType
+﻿namespace ProjectManagement.Application.DTOs.TaskType
 {
     public class CreateTaskTypeDto
     {

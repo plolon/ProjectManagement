@@ -1,4 +1,4 @@
-﻿namespace ProjectManagement.API.DTOs.Comment
+﻿namespace ProjectManagement.Application.DTOs.Comment
 {
     public class UpdateCommentDto : CreateCommentDto
     {

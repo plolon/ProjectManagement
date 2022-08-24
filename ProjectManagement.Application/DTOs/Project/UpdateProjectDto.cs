@@ -1,4 +1,4 @@
-﻿namespace ProjectManagement.API.DTOs.Project
+﻿namespace ProjectManagement.Application.DTOs.Project
 {
     public class UpdateProjectDto : CreateProjectDto
     {

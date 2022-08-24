@@ -1,4 +1,4 @@
-﻿namespace ProjectManagement.API.DTOs.Users
+﻿namespace ProjectManagement.Application.DTOs.Users
 {
     public class AddUserDto
     {
